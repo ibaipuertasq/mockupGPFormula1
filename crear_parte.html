@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Crear Parte</title>
+</head>
+<body>
+  <header>
+    <h1>Sistema de Partes del Hogar</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="crear_parte.html">Crear Parte</a>
+      <a href="ver_partes.html">Ver Partes</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="formulario">
+      <h2>Crear Parte</h2>
+      <form>
+        <label for="tipo">Tipo de objeto dañado:</label>
+        <select id="tipo" name="tipo">
+          <option value="vitroceramica">Vitrocerámica</option>
+          <option value="mampara">Mampara</option>
+          <option value="espejo">Espejo</option>
+          <option value="cristal">Cristal</option>
+        </select>
+
+        <label for="descripcion">Descripción del incidente:</label>
+        <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+
+        <label for="imagen">Adjuntar imágenes:</label>
+        <input type="file" id="imagen" name="imagen" accept="image/*" multiple />
+
+        <button type="submit">Enviar Parte</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Aseguradora Hogar Seguro</p>
+  </footer>
+</body>
+</html>
