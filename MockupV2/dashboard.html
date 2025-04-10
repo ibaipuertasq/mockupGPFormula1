@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Reportes - SeguroHogar</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <!-- Mismo header que index.html -->
+    </header>
+
+    <main class="dashboard-container">
+        <div class="container">
+            <h1>Mis reportes</h1>
+            
+            <div class="dashboard-filters">
+                <div class="filter-group">
+                    <label for="status-filter">Filtrar por estado:</label>
+                    <select id="status-filter">
+                        <option value="all">Todos</option>
+                        <option value="pending">Pendientes</option>
+                        <option value="in-progress">En progreso</option>
+                        <option value="resolved">Resueltos</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="date-filter">Ordenar por:</label>
+                    <select id="date-filter">
+                        <option value="newest">Más recientes primero</option>
+                        <option value="oldest">Más antiguos primero</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="reports-list">
+                <div class="report-card">
+                    <div class="report-header">
+                        <div class="report-id">#INC-2023-0456</div>
+                        <div class="report-status status-pending">Pendiente de revisión</div>
+                    </div>
+                    <div class="report-content">
+                        <div class="report-summary">
+                            <h3>Rotura de vitrocerámica</h3>
+                            <p><strong>Fecha:</strong> 15/10/2023</p>
+                            <p><strong>Descripción:</strong> Rotura en el lado izquierdo de la placa, aproximadamente 20cm de longitud...</p>
+                        </div>
+                        <div class="report-actions">
+                            <a href="report-detail.html?id=INC-2023-0456" class="btn-view">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Más reportes -->
+            </div>
+        </div>
+    </main>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

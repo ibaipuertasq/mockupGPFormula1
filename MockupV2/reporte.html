@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar Incidente - SeguroHogar</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <!-- Mismo header que index.html -->
+    </header>
+
+    <main class="report-container">
+        <div class="container">
+            <div class="report-header">
+                <h1>Reportar nuevo incidente</h1>
+                <div class="progress-bar">
+                    <div class="progress-step active" data-step="1">1. Tipo de incidente</div>
+                    <div class="progress-step" data-step="2">2. Detalles</div>
+                    <div class="progress-step" data-step="3">3. Fotos</div>
+                    <div class="progress-step" data-step="4">4. Revisión</div>
+                </div>
+            </div>
+
+            <form id="incident-form" class="report-form">
+                <!-- Paso 1: Tipo de incidente -->
+                <div class="form-step active" data-step="1">
+                    <h2>¿Qué tipo de objeto se ha dañado?</h2>
+                    <div class="object-grid">
+                        <div class="object-option">
+                            <input type="radio" name="object-type" id="vitroceramica" value="vitroceramica">
+                            <label for="vitroceramica">
+                                <img src="images/vitroceramica-icon.svg" alt="Vitrocerámica">
+                                <span>Vitrocerámica</span>
+                            </label>
+                        </div>
+                        <!-- Más opciones de objetos -->
+                    </div>
+                    <div class="form-navigation">
+                        <button type="button" class="btn-next" data-next="2">Siguiente</button>
+                    </div>
+                </div>
+
+                <!-- Paso 2: Detalles (dinámico según tipo de objeto) -->
+                <div class="form-step" data-step="2">
+                    <h2>Detalles del incidente</h2>
+                    <div id="dynamic-questions">
+                        <!-- Las preguntas se cargarán dinámicamente según el tipo de objeto -->
+                    </div>
+                    <div class="form-navigation">
+                        <button type="button" class="btn-prev" data-prev="1">Anterior</button>
+                        <button type="button" class="btn-next" data-next="3">Siguiente</button>
+                    </div>
+                </div>
+
+                <!-- Paso 3: Fotos -->
+                <div class="form-step" data-step="3">
+                    <h2>Adjunta fotos del daño</h2>
+                    <div class="photo-upload">
+                        <div class="upload-area" id="upload-area">
+                            <input type="file" id="photo-upload" accept="image/*" multiple>
+                            <label for="photo-upload">
+                                <img src="images/upload-icon.svg" alt="Subir fotos">
+                                <p>Arrastra tus fotos aquí o haz clic para seleccionar</p>
+                            </label>
+                        </div>
+                        <div class="photo-preview" id="photo-preview">
+                            <!-- Las miniaturas de las fotos aparecerán aquí -->
+                        </div>
+                    </div>
+                    <div class="form-navigation">
+                        <button type="button" class="btn-prev" data-prev="2">Anterior</button>
+                        <button type="button" class="btn-next" data-next="4">Siguiente</button>
+                    </div>
+                </div>
+
+                <!-- Paso 4: Revisión -->
+                <div class="form-step" data-step="4">
+                    <h2>Revisa tu reporte</h2>
+                    <div class="review-summary">
+                        <div class="summary-section">
+                            <h3>Tipo de objeto</h3>
+                            <p id="review-object-type"></p>
+                        </div>
+                        <div class="summary-section">
+                            <h3>Detalles</h3>
+                            <div id="review-details"></div>
+                        </div>
+                        <div class="summary-section">
+                            <h3>Fotos adjuntas</h3>
+                            <div class="review-photos" id="review-photos"></div>
+                        </div>
+                    </div>
+                    <div class="form-navigation">
+                        <button type="button" class="btn-prev" data-prev="3">Anterior</button>
+                        <button type="submit" class="btn-submit">Enviar reporte</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/report-form.js"></script>
+</body>
+</html>
