@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Reporte - SeguroHogar</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <!-- Mismo header que las otras páginas -->
+    </header>
+
+    <main class="report-detail-container">
+        <div class="container">
+            <a href="dashboard.html" class="btn-back">← Volver a mis reportes</a>
+            
+            <div class="report-detail-header">
+                <h1>Detalle del reporte <span class="report-id">#INC-2023-0456</span></h1>
+                <div class="report-status status-in-progress">En progreso</div>
+            </div>
+            
+            <div class="report-detail-grid">
+                <div class="report-info">
+                    <div class="info-section">
+                        <h2>Información básica</h2>
+                        <div class="info-item">
+                            <strong>Tipo de objeto:</strong>
+                            <span>Vitrocerámica</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Marca/modelo:</strong>
+                            <span>Bosch PKM875DP1E</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Fecha del incidente:</strong>
+                            <span>15/10/2023</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Fecha de reporte:</strong>
+                            <span>15/10/2023 14:32</span>
+                        </div>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h2>Descripción del incidente</h2>
+                        <p>La vitrocerámica presentaba una rotura en el lado izquierdo de aproximadamente 20cm de longitud después de que cayera una olla pesada mientras se cocinaba. La rotura afecta a una de las zonas de cocción pero el resto funciona correctamente.</p>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h2>Fotos del daño</h2>
+                        <div class="photo-gallery">
+                            <div class="main-photo">
+                                <img src="images/damage-1.jpg" alt="Daño en vitrocerámica" id="main-photo">
+                            </div>
+                            <div class="photo-thumbnails">
+                                <img src="images/damage-1-thumb.jpg" alt="Miniatura 1" class="thumbnail active" data-full="images/damage-1.jpg">
+                                <img src="images/damage-2-thumb.jpg" alt="Miniatura 2" class="thumbnail" data-full="images/damage-2.jpg">
+                                <img src="images/damage-3-thumb.jpg" alt="Miniatura 3" class="thumbnail" data-full="images/damage-3.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="report-timeline">
+                    <h2>Progreso del reporte</h2>
+                    <div class="timeline">
+                        <div class="timeline-item completed">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>Reporte creado</h3>
+                                <p>15/10/2023 14:32</p>
+                                <p>El cliente ha completado el formulario de reporte.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item completed">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>Análisis inicial</h3>
+                                <p>15/10/2023 16:45</p>
+                                <p>Nuestro sistema ha analizado las fotos y determinó que se trata de una rotura en vitrocerámica.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item completed">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>Asignado a perito</h3>
+                                <p>16/10/2023 09:15</p>
+                                <p>El reporte ha sido asignado al perito Juan Pérez para su evaluación.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item current">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>Evaluación en curso</h3>
+                                <p>16/10/2023 11:30</p>
+                                <p>El perito está evaluando las fotos y determinando la mejor solución.</p>
+                                <div class="timeline-actions">
+                                    <button class="btn-small">Solicitar más información</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item pending">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>Resolución</h3>
+                                <p>Pendiente</p>
+                                <p>Se comunicará la solución propuesta: reparación, reemplazo o reembolso.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="customer-support">
+                <h2>¿Necesitas ayuda?</h2>
+                <p>Si tienes alguna pregunta sobre tu reporte, nuestro equipo de soporte está disponible para ayudarte.</p>
+                <div class="support-options">
+                    <a href="#" class="btn-support">
+                        <img src="images/chat-icon.png" alt="Chat">
+                        Chat en vivo
+                    </a>
+                    <a href="#" class="btn-support">
+                        <img src="images/call-icon.png" alt="Llamar">
+                        Llamar al soporte
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Añade esto al final, antes de cerrar el main -->
+        <div class="back-to-home">
+            <a href="index.html" class="btn-back-home">
+                <img src="images/home-icon.png" alt="Inicio">
+                Volver al inicio
+            </a>
+        </div>
+    </main>
+
+    <script src="js/report-detail.js"></script>
+</body>
+</html>
